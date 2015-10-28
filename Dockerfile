@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y cron supervisor libicu-dev zlib1g-dev l
     && mv xdebug-2.3.3 /usr/src/php/ext/xdebug \
     && mv apcu-4.0.7 /usr/src/php/ext/apcu \
 
-    && docker-php-ext-install apcu intl mbstring pdo_mysql xdebug zip iconv mcrypt mbstring curl json soap sockets \
+    && docker-php-ext-install apcu intl mbstring pdo_mysql xdebug zip iconv mcrypt mbstring curl json soap sockets bcmath \
 
     && php -r "readfile('https://getcomposer.org/installer');" | php -- --install-dir=/usr/local/bin --filename=composer \
     && chmod +x /usr/local/bin/composer
