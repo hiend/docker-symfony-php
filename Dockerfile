@@ -26,7 +26,7 @@ RUN chmod +x /entrypoint.sh && chmod 0644 /etc/cron.d/fly && usermod -u 1000 www
 
 WORKDIR /var/www/symfony
 
-EXPOSE 9876 9771
+EXPOSE 9771
 
 ENTRYPOINT ["/entrypoint.sh"]
 
