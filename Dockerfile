@@ -18,7 +18,6 @@ RUN apt-get update && apt-get install -y libicu-dev zlib1g-dev libmcrypt-dev lib
     && chmod +x /usr/local/bin/composer
 
 ADD php.ini /usr/local/etc/php/conf.d/fly.ini
-ADD upstream.conf /etc/nginx/conf.d/upstream.conf
 
 WORKDIR /var/www/symfony
 
