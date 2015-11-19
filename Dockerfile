@@ -20,9 +20,9 @@ RUN apt-get update && apt-get install -y cron supervisor libicu-dev zlib1g-dev l
 ADD php.ini /usr/local/etc/php/conf.d/fly.ini
 ADD entrypoint.sh /
 ADD supervisord.conf /etc/supervisor/conf.d/
-ADD crontab /etc/cron.d/fly
+ADD crontab /etc/crontab
 
-RUN chmod +x /entrypoint.sh && chmod 0644 /etc/cron.d/fly && usermod -u 1000 www-data
+RUN chmod +x /entrypoint.sh && chown root:root /etc/crontab && usermod -u 1000 www-data
 
 WORKDIR /var/www/symfony
 

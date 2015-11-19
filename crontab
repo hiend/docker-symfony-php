@@ -1,1 +1,5 @@
-10 */6 * * * /usr/local/bin/php /var/www/symfony/app/console api:load:rates
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=""
+
+10 */6 * * * root php /var/www/symfony/app/console api:load:rates
